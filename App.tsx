@@ -7,19 +7,25 @@ export default function App() {
 
   let call = async () => {
     let phoneNumber = ''
+    let firstNumber = inputNumber.charAt(0)
     if(inputNumber.length != 5){
       alert("Input number needs to be 5 digits")
       return
     }
-    if (inputNumber.charAt(0) == '5')
+    else if (firstNumber != '3' && firstNumber != '5' && firstNumber != '6')
+    {
+      alert("Invalid number. Must start with 3, 5, or 6.")
+      return
+    }
+    if (firstNumber == '5')
     {
       phoneNumber = '61468' + inputNumber
     } 
-    else if(inputNumber.charAt(0) == '6')
+    else if(firstNumber == '6')
     {
       phoneNumber = '61436' + inputNumber
     } 
-    else if( inputNumber.charAt(0) == '3')
+    else if( firstNumber == '3')
     {
       phoneNumber = '61429'+inputNumber
     }
