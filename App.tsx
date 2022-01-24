@@ -29,7 +29,7 @@ export default function App() {
 
   return (
         <View style={styles.container}>
-        <Text style={styles.textStyle}>Enter Number</Text>
+        <Text style={styles.instructions}>Enter 5 digit OSU number</Text>
         <TextInput
           placeholder={'Enter number here'}
           style={styles.input}
@@ -50,6 +50,11 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
+  },
+  instructions: {
+    color: '#888',
+    fontSize: 18,
+    marginHorizontal: 15,
   },
   button: {
     backgroundColor: "blue",
