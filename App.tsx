@@ -5,8 +5,8 @@ import { Linking, StyleSheet, Text, TextInput, TouchableOpacity, View } from 're
 export default function App() {
   const [inputNumber, setInputNumber] = React.useState('');
 
-  let call = async () => {
-    let phoneNumber = ''
+  let call = async (test: number) => {
+    let phoneNumber:string = ''
     let firstNumber = inputNumber.charAt(0)
     if(inputNumber.length != 5){
       alert("Input number needs to be 5 digits")
@@ -43,7 +43,7 @@ export default function App() {
           onChangeText={(inputNumber) => setInputNumber(inputNumber)}
           value={inputNumber}
         />
-        <TouchableOpacity onPress={call} style={styles.button}>
+        <TouchableOpacity onPress={() => call(Number(inputNumber))} style={styles.button}>
           <Text style={styles.buttonText}>Call</Text>
         </TouchableOpacity>
       </View>

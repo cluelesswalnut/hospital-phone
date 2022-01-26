@@ -1,6 +1,45 @@
 {
   "extends": "expo/tsconfig.base",
   "compilerOptions": {
-    "strict": true
-  }
+    "jsx": "react",
+    "strict": true,
+    "noEmit": false,
+  // },
+    // // "target": "ES2020",
+    "target": "ESNext",
+    "module": "commonjs",
+    "outDir": "out",
+    "rootDir": ".",
+    "noImplicitAny": false,
+    "strictNullChecks": true,
+    "checkJs": true,
+    "allowJs": true,
+    "moduleResolution": "node",
+    "types": ["node"],
+    // "lib": ["es6"],
+    "lib": ["DOM", "ESNext"],
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "useUnknownInCatchVariables": false,  // TypeScript 4.4+ only!
+  },
+  // "include": [
+  //   "**/*.ts",
+  //   "**/*.tsx",
+  //   "**/*.js"
+  // ],
+  "exclude": ["out/"]
 }
+
+// "allowJs": true,
+// "esModuleInterop": true,
+// "jsx": "react-native",
+// "lib": ["DOM", "ESNext"],
+// "moduleResolution": "node",
+// "noEmit": true,
+// "resolveJsonModule": true,
+// "skipLibCheck": true,
+// "target": "ESNext"
+// },
+
+// "exclude": ["node_modules", "babel.config.js", "metro.config.js", "jest.config.js"]
