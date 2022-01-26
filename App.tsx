@@ -3,9 +3,9 @@ import { StatusBar } from 'expo-status-bar';
 import { Linking, StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native';
 
 export default function App() {
-  const [inputNumber, setInputNumber] = React.useState('');
+  const [inputNumber, setInputNumber] = React.useState<string>('');
 
-  let call = async () => {
+  let call = async ():Promise<void> => {
     let phoneNumber:string = ''
     let firstNumber = inputNumber.charAt(0)
     if(inputNumber.length != 5){
@@ -30,6 +30,7 @@ export default function App() {
       phoneNumber = '61429'+inputNumber
     }
 
+    setInputNumber('')
     Linking.openURL('tel:'+phoneNumber);
   }
 

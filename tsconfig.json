@@ -10,7 +10,8 @@
     "module": "commonjs",
     "outDir": "out",
     "rootDir": ".",
-    "noImplicitAny": false,
+    "noImplicitAny": true,
+    "noImplicitReturns": true,
     "strictNullChecks": true,
     "checkJs": true,
     "allowJs": true,
@@ -28,7 +29,7 @@
   //   "**/*.tsx",
   //   "**/*.js"
   // ],
-  "exclude": ["out/"]
+  "exclude": ["out/", "babel.config.js"]
 }
 
 // "allowJs": true,
