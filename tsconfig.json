@@ -4,8 +4,6 @@
     "jsx": "react",
     "strict": true,
     "noEmit": false,
-  // },
-    // // "target": "ES2020",
     "target": "ESNext",
     "module": "commonjs",
     "outDir": "out",
@@ -17,30 +15,11 @@
     "allowJs": true,
     "moduleResolution": "node",
     "types": ["node"],
-    // "lib": ["es6"],
     "lib": ["DOM", "ESNext"],
     "esModuleInterop": true,
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
     "useUnknownInCatchVariables": false,  // TypeScript 4.4+ only!
   },
-  // "include": [
-  //   "**/*.ts",
-  //   "**/*.tsx",
-  //   "**/*.js"
-  // ],
   "exclude": ["out/", "babel.config.js"]
 }
-
-// "allowJs": true,
-// "esModuleInterop": true,
-// "jsx": "react-native",
-// "lib": ["DOM", "ESNext"],
-// "moduleResolution": "node",
-// "noEmit": true,
-// "resolveJsonModule": true,
-// "skipLibCheck": true,
-// "target": "ESNext"
-// },
-
-// "exclude": ["node_modules", "babel.config.js", "metro.config.js", "jest.config.js"]
