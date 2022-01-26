@@ -1,6 +1,25 @@
 {
   "extends": "expo/tsconfig.base",
   "compilerOptions": {
-    "strict": true
-  }
+    "jsx": "react",
+    "strict": true,
+    "noEmit": false,
+    "target": "ESNext",
+    "module": "commonjs",
+    "outDir": "out",
+    "rootDir": ".",
+    "noImplicitAny": true,
+    "noImplicitReturns": true,
+    "strictNullChecks": true,
+    "checkJs": true,
+    "allowJs": true,
+    "moduleResolution": "node",
+    "types": ["node"],
+    "lib": ["DOM", "ESNext"],
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "useUnknownInCatchVariables": false,  // TypeScript 4.4+ only!
+  },
+  "exclude": ["out/", "babel.config.js"]
 }
