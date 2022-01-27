@@ -45,7 +45,7 @@ export const PhoneInput = () => {
 					autoFocus={true}
 				/>
 				<TouchableOpacity style={styles.clearButtonParent} onPress={() => setInputNumber('')}>
-					<Image style={styles.clearButton} source={require('./assets/clear.png')} />
+					<Image style={styles.clearButton} source={require('../assets/clear.png')} />
 				</TouchableOpacity>
 			</View>
 			<TouchableOpacity onPress={call} style={styles.button}>
