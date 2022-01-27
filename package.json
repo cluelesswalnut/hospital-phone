@@ -10,7 +10,7 @@
 		"eject": "expo eject",
 		"prettier": "prettier App.tsx src --write",
 		"lint": "eslint App.tsx src --fix",
-		"clean": "yarn prettier && yarn lint"
+		"clean": "npm run prettier && npm run lint"
 	},
 	"dependencies": {
 		"expo": "~44.0.0",

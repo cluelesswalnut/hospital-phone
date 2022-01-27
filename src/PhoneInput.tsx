@@ -40,7 +40,7 @@ export const PhoneInput = () => {
 					placeholder={'Enter number here'}
 					style={styles.textInput}
 					keyboardType='numeric'
-					onChangeText={inputNumber => setInputNumber(inputNumber)}
+					onChangeText={setInputNumber}
 					value={inputNumber}
 					autoFocus={true}
 				/>
