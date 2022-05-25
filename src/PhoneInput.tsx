@@ -16,8 +16,8 @@ export const PhoneInput = () => {
 		if (inputNumber.length != 5) {
 			alert('Input number needs to be 5 digits');
 			return;
-		} else if (firstNumber != '3' && firstNumber != '5' && firstNumber != '6') {
-			alert('Invalid number. Must start with 3, 5, or 6.');
+		} else if (firstNumber != '3' && firstNumber != '5' && firstNumber != '6' && firstNumber != '7' && firstNumber != '8') {
+			alert('Invalid number. Must start with 3, 5, 6, 7, or 8.');
 			return;
 		}
 		if (firstNumber == '5') {
@@ -26,6 +26,10 @@ export const PhoneInput = () => {
 			phoneNumber = '61436' + inputNumber;
 		} else if (firstNumber == '3') {
 			phoneNumber = '61429' + inputNumber;
+		} else if (firstNumber == '7') {
+			phoneNumber = '61425' + inputNumber;
+		} else if (firstNumber == '8') {
+			phoneNumber = '61468' + inputNumber;
 		}
 
 		setInputNumber('');
