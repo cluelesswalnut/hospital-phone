@@ -1,18 +1,19 @@
 import * as React from 'react';
 import { Image, Linking, StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native';
 
+// Creates an app that takes a partial phone number and prepends
+// the appropriate digits. Then the number is sent to the phone app.
+
 export const PhoneInput = () => {
-	// TODO you don't need <string> here, it will be inferred automatically
-	// To see, scroll over inputNumber and it will give you the type. Then delete and do again. No change!
+
+	// setup state for the input number
 	const [inputNumber, setInputNumber] = React.useState('');
 
-	// Same here - you rarely need to set explicit return types on functions. They will be inferred
-	// automatically. Actually, I try to never do it for that very reason. Better to let the compiler
-	// do the work for you, and that way you know exactly what it returns without risking writing yourself
-	// and messing up. Also, this function doesn't need to be async anyways
 	const call = async (): Promise<void> => {
 		let phoneNumber = '';
 		const firstNumber = inputNumber.charAt(0);
+
+		// check for valid input
 		if (inputNumber.length != 5) {
 			alert('Input number needs to be 5 digits');
 			return;
@@ -20,6 +21,8 @@ export const PhoneInput = () => {
 			alert('Invalid number. Must start with 3, 5, 6, 7, or 8.');
 			return;
 		}
+
+		// pre-pend the appropriate digits
 		if (firstNumber == '5') {
 			phoneNumber = '61468' + inputNumber;
 		} else if (firstNumber == '6') {
@@ -33,6 +36,7 @@ export const PhoneInput = () => {
 		}
 
 		setInputNumber('');
+		// send the number to the telephone app
 		Linking.openURL('tel:' + phoneNumber);
 	};
 
@@ -48,6 +52,7 @@ export const PhoneInput = () => {
 					value={inputNumber}
 					autoFocus={true}
 				/>
+				{/* setup a button to clear the input */}
 				<TouchableOpacity style={styles.clearButtonParent} onPress={() => setInputNumber('')}>
 					<Image style={styles.clearButton} source={require('../assets/clear.png')} />
 				</TouchableOpacity>
