@@ -2,7 +2,7 @@
   "expo": {
     "name": "hospital-phone",
     "slug": "hospital-phone",
-    "version": "1.0.1",
+    "version": "2.0.0",
     "orientation": "portrait",
     "icon": "./assets/osu_icon.png",
     "splash": {
@@ -24,7 +24,8 @@
         "foregroundImage": "./assets/osu_icon.png",
         "backgroundColor": "#FFFFFF"
       },
-      "package": "com.markusernst.ous_hospital_phone"
+      "package": "com.markusernst.ous_hospital_phone",
+      "versionCode": 2
     },
     "web": {
       "favicon": "./assets/osu_icon.png"
