@@ -17,8 +17,8 @@ export const PhoneInput = () => {
 		if (inputNumber.length != 5) {
 			alert('Input number needs to be 5 digits');
 			return;
-		} else if (firstNumber != '3' && firstNumber != '5' && firstNumber != '6' && firstNumber != '7' && firstNumber != '8') {
-			alert('Invalid number. Must start with 3, 5, 6, 7, or 8.');
+		} else if (firstNumber != '3' && firstNumber != '5' && firstNumber != '2' && firstNumber != '4' && firstNumber != '6' && firstNumber != '7' && firstNumber != '8') {
+			alert('Invalid number. Cannot start with 1 or 9');
 			return;
 		}
 
@@ -30,11 +30,14 @@ export const PhoneInput = () => {
 		} else if (firstNumber == '3') {
 			phoneNumber = '61429' + inputNumber;
 		} else if (firstNumber == '7') {
-			phoneNumber = '61425' + inputNumber;
+			phoneNumber = '61424' + inputNumber;
 		} else if (firstNumber == '8') {
 			phoneNumber = '61468' + inputNumber;
+		} else if (firstNumber == '2') {
+			phoneNumber = '61429' + inputNumber;
+		} else if (firstNumber == '4') {
+			phoneNumber = '61481' + inputNumber;
 		}
-
 		setInputNumber('');
 		// send the number to the telephone app
 		Linking.openURL('tel:' + phoneNumber);
