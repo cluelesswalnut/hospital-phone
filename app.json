@@ -28,6 +28,11 @@
     },
     "web": {
       "favicon": "./assets/osu_icon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "b4882742-9b36-49eb-b933-c2eac8b1f73e"
+      }
     }
   }
 }
